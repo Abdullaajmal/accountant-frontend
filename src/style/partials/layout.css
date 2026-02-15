@@ -1,0 +1,29 @@
+.wideAppContainer {
+  max-width: 1150px;
+}
+
+.appContainer {
+  max-width: 1050px;
+}
+
+.smallNavigation {
+  margin-left: 100px;
+}
+
+.wideNavigation {
+  margin-left: 220px;
+}
+
+/* Premium Dashboard Background */
+.main-content-wrapper {
+  background: #F4F7F9;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Responsive padding */
+@media (max-width: 768px) {
+  .main-content-wrapper {
+    padding: 16px;
+  }
+}

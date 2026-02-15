@@ -1,0 +1,173 @@
+.ant-layout {
+  background: #ffffff !important;
+}
+.site-layout .site-layout-background {
+  background: #fff;
+}
+[data-theme='dark'] .site-layout .site-layout-background {
+  background: #141414;
+}
+
+.headerIcon .ant-dropdown-menu {
+  border-radius: 6px;
+  background: none;
+  padding: 0;
+  box-shadow: none;
+}
+.headerIcon .ant-dropdown-menu-item:hover,
+.headerIcon .ant-dropdown-menu-item.ant-dropdown-menu-item-active {
+  background: none;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.login-form button[type='submit'] {
+  margin-bottom: 20px;
+}
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+/* Button improvements - rounded corners and better colors */
+.ant-btn {
+  border-radius: 8px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.ant-btn-primary {
+  background: #6461A0;
+  border: none;
+  box-shadow: 0 2px 4px rgba(100, 97, 160, 0.2);
+}
+
+.ant-btn-primary:hover {
+  background: #54518a;
+  box-shadow: 0 4px 8px rgba(100, 97, 160, 0.3);
+  transform: translateY(-1px);
+}
+
+.ant-btn-default {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.ant-btn-default:hover {
+  border-color: #6461A0;
+  color: #6461A0;
+}
+
+/* Input improvements */
+.ant-input {
+  border-radius: 8px !important;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.ant-input:hover {
+  border-color: #5B7B9C;
+}
+
+.ant-input:focus {
+  border-color: #6461A0;
+  box-shadow: 0 0 0 2px rgba(100, 97, 160, 0.1);
+}
+
+/* Select improvements */
+.ant-select-selector {
+  border-radius: 8px !important;
+  border: 1px solid #e0e0e0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-select:hover .ant-select-selector {
+  border-color: #5B7B9C !important;
+}
+
+.ant-select-focused .ant-select-selector {
+  border-color: #6461A0 !important;
+  box-shadow: 0 0 0 2px rgba(100, 97, 160, 0.1) !important;
+}
+
+/* Remove borders from cards and boxes */
+.ant-card {
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.03) !important;
+}
+
+.ant-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Tag improvements */
+.ant-tag {
+  border-radius: 6px !important;
+  border: none !important;
+  padding: 4px 12px !important;
+  font-weight: 500;
+}
+
+.ant-table-thead > tr > th {
+  font-weight: 700;
+}
+.ant-typography strong {
+  font-weight: 700;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700 !important;
+}
+
+.ant-menu-inline {
+  padding-bottom: 70px;
+}
+
+.tabContent .ant-tabs-right > .ant-tabs-content-holder,
+.tabContent .ant-tabs-right > div > .ant-tabs-content-holder {
+  border-right: none;
+}
+
+.tabContent .ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+  margin: 0;
+}
+
+.ant-select-show-search:where(.css-dev-only-do-not-override-2q8sxy).ant-select:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  cursor: pointer;
+}
+
+.ant-menu-item {
+  height: 36px !important;
+}
+@media (max-width: 768px) {
+  .tabContent .ant-tabs-right > .ant-tabs-content-holder > .ant-tabs-content > .ant-tabs-tabpane {
+    padding-right: 0;
+    margin-top: 30px;
+  }
+  .tabContent .ant-tabs {
+    display: block;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
