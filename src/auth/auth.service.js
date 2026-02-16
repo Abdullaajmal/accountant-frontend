@@ -6,10 +6,20 @@ import successHandler from '@/request/successHandler';
 
 export const login = async ({ loginData }) => {
   try {
-    const response = await axios.post(
-      API_BASE_URL + `login?timestamp=${new Date().getTime()}`,
-      loginData
-    );
+    const loginUrl = API_BASE_URL + `login?timestamp=${new Date().getTime()}`;
+    
+    // Debug logging for production
+    if (import.meta.env.PROD) {
+      console.log('🔐 Login Debug:', {
+        API_BASE_URL,
+        loginUrl,
+        backendServer: import.meta.env.VITE_BACKEND_SERVER,
+        isProd: import.meta.env.PROD,
+        devRemote: import.meta.env.VITE_DEV_REMOTE,
+      });
+    }
+    
+    const response = await axios.post(loginUrl, loginData);
 
     const { status, data } = response;
 
@@ -22,6 +32,13 @@ export const login = async ({ loginData }) => {
     );
     return data;
   } catch (error) {
+    // Enhanced error logging
+    console.error('❌ Login Error:', {
+      message: error.message,
+      response: error.response?.data,
+      status: error.response?.status,
+      url: error.config?.url,
+    });
     return errorHandler(error);
   }
 };
