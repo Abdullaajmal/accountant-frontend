@@ -27,15 +27,20 @@ const errorHandler = (error) => {
   const { response } = error;
 
   if (!response) {
-    notification.config({
-      duration: 20,
-      maxCount: 1,
-    });
+    // Use notificationInstance instead of notification
+    if (notificationInstance) {
+      notificationInstance.config({
+        duration: 20,
+        maxCount: 1,
+      });
+    }
     // Code to execute when there is no internet connection
-    // notification.error({
-    //   message: 'Problem connecting to server',
-    //   description: 'Cannot connect to the server, Try again later',
-    // });
+    // if (notificationInstance) {
+    //   notificationInstance.error({
+    //     message: 'Problem connecting to server',
+    //     description: 'Cannot connect to the server, Try again later',
+    //   });
+    // }
     return {
       success: false,
       result: null,
